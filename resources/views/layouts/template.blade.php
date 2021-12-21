@@ -10,7 +10,7 @@
 <title>:: Epic :: Login</title>
 
 <!-- Bootstrap Core and vandor -->
-<link rel="stylesheet" href={{asset("assetsG/plugins/bootstrap/css/bootstrap.min.css")}} />
+<link rel="stylesheet" href={{secure_asset("assetsG/plugins/bootstrap/css/bootstrap.min.css")}} />
 
 <!-- Core css -->
 <link rel="stylesheet" href={{secure_asset("assetsG/css/style.min.css")}}/>
