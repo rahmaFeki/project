@@ -28,7 +28,7 @@
             "Database\\Seeders\\": "database/seeders/"
         },
         "classmap": [
-            "app/Repositories"
+            "App/Repositories"
           ]
     },
     
