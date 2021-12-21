@@ -129,7 +129,7 @@
                                             @foreach ($choix as $u)
 
                                             <tr id="{!! $u->id!!}">
-                                                <td><img src="<?php echo asset('storage/'.$u->image) ?>" width="200px"
+                                                <td><img src="<?php echo asset('public/storage/'.$u->image) ?>" width="200px"
                                                         height="200px" /></td>
                                                 <td>{!! $u->lib!!}</td>
 
