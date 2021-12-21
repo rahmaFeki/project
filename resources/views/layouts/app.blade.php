@@ -60,9 +60,9 @@
 <script src={{secure_asset("assetsG/bundles/summernote.bundle.js")}}></script>
 
 <!-- Start project main js  and page js -->
-<script src={{asset("assetsG/js/core.js")}}></script>
-<script src={{asset("assets/js/page/index.js")}}></script>
-<script src={{asset("assets/js/page/summernote.js")}}></script>
+<script src={{secure_asset("assetsG/js/core.js")}}></script>
+<script src={{secure_asset("assets/js/page/index.js")}}></script>
+<script src={{secure_asset("assets/js/page/summernote.js")}}></script>
 <!-- Start Main project js, jQuery, Bootstrap -->
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
