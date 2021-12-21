@@ -1,6 +1,6 @@
 <?php
 
-namespace app\repositories;
+namespace App\Repositories;
 use DB;
 use App\Models\Entrep;
 
