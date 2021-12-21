@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Repositories;
+namespace App\repositories;
 
 use App\Models\Gallery;
 use App\Models\Entrep;

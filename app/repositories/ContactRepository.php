@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Repositories;
+namespace App\repositories;
 
 use App\Models\Contact;
 use App\Models\Entrep;
