@@ -51,3 +51,4 @@ Route::get('/', 'App\Http\Controllers\PageController@indexDefault')->name('page.
 Route::get('/{id}', 'App\Http\Controllers\PageController@index')->name('page.index');
 Route::get('/error/401', 'App\Http\Controllers\ErrorController@error401')->name('erreur.401');
 
+

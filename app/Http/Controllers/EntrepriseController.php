@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Http\Request;
-//use App\Repositories\EntrepriseRepository;
+use App\Interfaces\EntrepriseRepositoryInterface;
 use App\Models\Entrep;
 class EntrepriseController extends Controller
 {
@@ -12,7 +12,7 @@ class EntrepriseController extends Controller
 
     protected $nbrPerPage = 4;
 
-    public function __construct(App\Repositories\EntrepriseRepository $entre)
+    public function __construct(EntrepriseRepositoryInterface $entre)
 
     {  $this->middleware('auth');
 		$this->entrepriseRepository=$entre;

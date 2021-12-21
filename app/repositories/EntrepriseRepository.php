@@ -1,12 +1,13 @@
 <?php
 
 namespace App\Repositories;
+use App\Interfaces\EntrepriseRepositoryInterface;
 use DB;
 use App\Models\Entrep;
 
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Auth;
-public class EntrepriseRepository
+ class EntrepriseRepository implements EntrepriseRepositoryInterface
 {
 
     protected $entreprise;
@@ -37,7 +38,7 @@ public class EntrepriseRepository
 }
 
 
-	private function save(Entrep $entrep, Array $inputs)
+	public function save(Entrep $entrep, Array $inputs)
 	{
 	
 		$entrep->nom = $inputs['nom'];
