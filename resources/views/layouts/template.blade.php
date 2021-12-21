@@ -13,21 +13,21 @@
 <link rel="stylesheet" href={{asset("assetsG/plugins/bootstrap/css/bootstrap.min.css")}} />
 
 <!-- Core css -->
-<link rel="stylesheet" href={{asset("assetsG/css/style.min.css")}}/>
-<link rel="stylesheet" href={{asset("assets/css/default.css")}} />
+<link rel="stylesheet" href={{secure_asset("assetsG/css/style.min.css")}}/>
+<link rel="stylesheet" href={{secure_asset("assets/css/default.css")}} />
 
 <!-- Bootstrap Core and vandor -->
-<link rel="stylesheet" href={{asset("assetsG/plugins/bootstrap/css/bootstrap.min.css")}} />
+<link rel="stylesheet" href={{secure_asset("assetsG/plugins/bootstrap/css/bootstrap.min.css")}} />
 
 <!-- Plugins css -->
-<link rel="stylesheet" href={{asset("assetsG/plugins/summernote/dist/summernote.css")}}/>
+<link rel="stylesheet" href={{secure_asset("assetsG/plugins/summernote/dist/summernote.css")}}/>
 
 
 
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 	
-<script src={{asset("assetsG/js/jquery.js")}}></script>
+<script src={{secure_asset("assetsG/js/jquery.js")}}></script>
 </head>
 
 <body >
@@ -51,26 +51,26 @@ $( "#loginForm" ).on('submit',function( e) {
 
 </script>
 <!-- Start Main project js, jQuery, Bootstrap -->
-<script src={{asset("assetsG/bundles/lib.vendor.bundle.js")}}></script>
+<script src={{secure_asset("assetsG/bundles/lib.vendor.bundle.js")}}></script>
 
 <!-- Start project main js  and page js -->
-<script src={{asset("assetsG/js/core.js")}}></script>
+<script src={{secure_asset("assetsG/js/core.js")}}></script>
 <!-- Start Main project js, jQuery, Bootstrap -->
-<script src={{asset("assetsG/bundles/lib.vendor.bundle.js")}}></script>
+<script src={{secure_asset("assetsG/bundles/lib.vendor.bundle.js")}}></script>
 
 <!-- Start all plugin js -->
-<script src={{asset("assetsG/bundles/counterup.bundle.js")}}></script>
-<script src={{asset("assetsG/bundles/apexcharts.bundle.js")}}></script>
-<script src={{asset("assetsG/bundles/summernote.bundle.js")}}></script>
+<script src={{secure_asset("assetsG/bundles/counterup.bundle.js")}}></script>
+<script src={{secure_asset("assetsG/bundles/apexcharts.bundle.js")}}></script>
+<script src={{secure_asset("assetsG/bundles/summernote.bundle.js")}}></script>
 
 <!-- Start project main js  and page js -->
-<script src={{asset("assetsG/js/core.js")}}></script>
-<script src={{asset("assetsG/js/page/index.js")}}></script>
-<script src={{asset("assetsG/js/page/summernote.js")}}></script>
+<script src={{secure_asset("assetsG/js/core.js")}}></script>
+<script src={{secure_asset("assetsG/js/page/index.js")}}></script>
+<script src={{secure_asset("assetsG/js/page/summernote.js")}}></script>
 <!-- Start Main project js, jQuery, Bootstrap -->
-<script src={{asset("assetsG/bundles/lib.vendor.bundle.js")}}></script>
+<script src={{secure_asset("assetsG/bundles/lib.vendor.bundle.js")}}></script>
 
 <!-- Start project main js  and page js -->
-<script src={{asset("assetsG/js/core.js")}}></script>
+<script src={{secure_asset("assetsG/js/core.js")}}></script>
 </body>
 </html>
