@@ -18,7 +18,7 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
 <!-- Bootstrap Core and vandor -->
 <link rel="stylesheet" href={{secure_asset("assetsG/plugins/bootstrap/css/bootstrap.min.css")}} />
-
+<link rel="stylesheet" href={{secure_asset("assetsG/css/style.min.css")}}/>
 <!-- Core css -->
 <link rel="stylesheet" href={{secure_asset("assetsG/css/style.min.css")}}/>
 <link rel="stylesheet" href={{secure_asset("assets/css/default.css")}} />
