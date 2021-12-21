@@ -72,7 +72,7 @@
                 <div class="container">
                     <div class="outer-box clearfix">
                         <div class="header-left clearfix pull-left">
-                            <div class="logo"><a href="index.html"><img src={{asset_secure("assetsFront/images/logoMSM.png")}}
+                            <div class="logo"><a href="index.html"><img src={{asset("assetsFront/images/logoMSM.png")}}
                                         width="200px" height="150px" alt="Awesome Logo" title=""></a></div>
                         </div>
                         <div class="header-right pull-right">
@@ -137,23 +137,30 @@
                                             <li><a href="#service">{{$sections[3]}}</a>
 
                                             </li>
-                                          
+                                            <li class="dropdown"><a href="#">{{$sections[4]}}</a>
+                                                <ul>
+                                                    <li><a href="team.html">Our Team</a></li>
+                                                    <li><a href="testimonials.html">Testimonials</a></li>
+                                                    <li><a href="faq.html">Faq</a></li>
+                                                    <li><a href="error.html">404 Error page</a></li>
+                                                </ul>
+                                            </li>
                                             <li><a href="#choisir">{{$sections[5]}}</a>
 
                                             </li>
                                             <li><a href="#galler">{{$sections[6]}}</a>
 
                                             <li class="dropdown"><a href="{{ route('page.index',$langCode)}}"> <img
-                                                        src="{{asset_secure("assetsFront/images/$langCode.png")}}"
+                                                        src="{{asset("assetsFront/images/$langCode.png")}}"
                                                         height="20px" width="20px" />
                                                     {{$lang}}</a>
                                                 <ul>
                                                     <li ><a href="{{ route('page.index',1)}}"> <img
-                                                                src="{{asset_secure("assetsFront/images/1.png")}}"
+                                                                src="{{asset("assetsFront/images/1.png")}}"
                                                                 height="20px" width="20px" />
                                                             FR</a>
                                                     <li><a href="{{ route('page.index',2)}}"><img
-                                                                src="{{asset_secure("assetsFront/images/2.png")}}"
+                                                                src="{{asset("assetsFront/images/2.png")}}"
                                                                 height="20px" width="20px" />
                                                             EN</a></li>
 
@@ -194,7 +201,7 @@
                 <div class="menu-backdrop"></div>
                 <div class="close-btn"><span class="icon fa fa-times-circle"></span></div>
                 <nav class="menu-box">
-                    <div class="nav-logo"><a href="index.html"><img src={{asset_secure("assetsFront/images/logoMSM.png")}}
+                    <div class="nav-logo"><a href="index.html"><img src={{asset("assetsFront/images/logoMSM.png")}}
                                 alt="" title=""></a></div>
                     <div class="menu-outer">
                         <!--Here Menu Will Come Automatically Via Javascript / Same Menu as in Header-->
