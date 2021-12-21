@@ -137,14 +137,7 @@
                                             <li><a href="#service">{{$sections[3]}}</a>
 
                                             </li>
-                                            <li class="dropdown"><a href="#">{{$sections[4]}}</a>
-                                                <ul>
-                                                    <li><a href="team.html">Our Team</a></li>
-                                                    <li><a href="testimonials.html">Testimonials</a></li>
-                                                    <li><a href="faq.html">Faq</a></li>
-                                                    <li><a href="error.html">404 Error page</a></li>
-                                                </ul>
-                                            </li>
+                                          
                                             <li><a href="#choisir">{{$sections[5]}}</a>
 
                                             </li>
