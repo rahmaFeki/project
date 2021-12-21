@@ -6,7 +6,7 @@ use App\Models\Entrep;
 
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Auth;
-class EntrepriseRepository
+public class EntrepriseRepository
 {
 
     protected $entreprise;

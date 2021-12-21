@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Http\Request;
-use App\Repositories;
+use App\Repositories\EntrepriseRepository;
 use App\Models\Entrep;
 class EntrepriseController extends Controller
 {
