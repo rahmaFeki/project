@@ -7,25 +7,25 @@
     <title>Home One || Erdunt || Responsive HTML 5 Template</title><!-- responsive meta -->
     <meta name="viewport" content="width=device-width, initial-scale=1"><!-- For IE -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link rel="stylesheet" href={{secure_asset("assetsFront/css/aos.css")}}>
-    <link rel="stylesheet" href={{secure_asset("assetsFront/css/bootstrap.min.css")}}>
-    <link rel="stylesheet" href={{secure_asset("assetsFront/css/imp.css")}}>
-    <link rel="stylesheet" href={{secure_asset("assetsFront/css/custom-animate.css")}}>
-    <link rel="stylesheet" href={{secure_asset("assetsFront/css/flaticon.css")}}>
-    <link rel="stylesheet" href={{secure_asset("assetsFront/css/font-awesome.min.css")}}>
-    <link rel="stylesheet" href={{secure_asset("assetsFront/css/owl.css")}}>
-    <link rel="stylesheet" href={{secure_asset("assetsFront/css/magnific-popup.css")}}>
-    <link rel="stylesheet" href={{secure_asset("assetsFront/css/scrollbar.css")}}>
-    <link rel="stylesheet" href={{secure_asset("assetsFront/css/hiddenbar.css")}}>
-    <link rel="stylesheet" href={{secure_asset("assetsFront/css/icomoon.css")}}>
-    <link rel="stylesheet" href={{secure_asset("assetsFront/css/color.css")}}>
+    <link rel="stylesheet" href={{asset("assetsFront/css/aos.css")}}>
+    <link rel="stylesheet" href={{asset("assetsFront/css/bootstrap.min.css")}}>
+    <link rel="stylesheet" href={{asset("assetsFront/css/imp.css")}}>
+    <link rel="stylesheet" href={{asset("assetsFront/css/custom-animate.css")}}>
+    <link rel="stylesheet" href={{asset("assetsFront/css/flaticon.css")}}>
+    <link rel="stylesheet" href={{asset("assetsFront/css/font-awesome.min.css")}}>
+    <link rel="stylesheet" href={{asset("assetsFront/css/owl.css")}}>
+    <link rel="stylesheet" href={{asset("assetsFront/css/magnific-popup.css")}}>
+    <link rel="stylesheet" href={{asset("assetsFront/css/scrollbar.css")}}>
+    <link rel="stylesheet" href={{asset("assetsFront/css/hiddenbar.css")}}>
+    <link rel="stylesheet" href={{asset("assetsFront/css/icomoon.css")}}>
+    <link rel="stylesheet" href={{asset("assetsFront/css/color.css")}}>
     <link href={{secure_asset("assetsFront/css/color/theme-color.css")}} id="jssDefault" rel="stylesheet">
-    <link rel="stylesheet" href={{secure_asset("assetsFront/css/rtl.css")}}>
-    <link rel="stylesheet" href={{secure_asset("assetsFront/css/style.css")}}>
-    <link rel="stylesheet" href={{secure_asset("assetsFront/css/responsive.css")}}><!-- Favicon -->
-    <link rel="apple-touch-icon" sizes="180x180" href={{secure_asset("assetsFront/images/favicon/apple-touch-icon.png")}}>
-    <link rel="icon" type="image/png" href={{secure_asset("assetsFront/images/favicon/favicon-32x32.png")}} sizes="32x32">
-    <link rel="icon" type="image/png" href={{secure_asset("assetsFront/images/favicon/favicon-16x16.png")}} sizes="16x16">
+    <link rel="stylesheet" href={{asset("assetsFront/css/rtl.css")}}>
+    <link rel="stylesheet" href={{asset("assetsFront/css/style.css")}}>
+    <link rel="stylesheet" href={{asset("assetsFront/css/responsive.css")}}><!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href={{asset("assetsFront/images/favicon/apple-touch-icon.png")}}>
+    <link rel="icon" type="image/png" href={{asset("assetsFront/images/favicon/favicon-32x32.png")}} sizes="32x32">
+    <link rel="icon" type="image/png" href={{asset("assetsFront/images/favicon/favicon-16x16.png")}} sizes="16x16">
     <!-- Fixing Internet Explorer-->
     <!--[if lt IE 9]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><script src="assets/js/html5shiv.js"></script><![endif]-->
 </head>
@@ -603,35 +603,35 @@
         <!--End footer area--><button class="scroll-top scroll-to-target bgclr1" data-target="html"><span
                 class="fa fa-angle-up"></span></button>
     </div>
-    <script src={{secure_asset("assetsFront/js/jquery.js")}}></script>
-    <script src={{secure_asset("assetsFront/js/aos.js")}}></script>
-    <script src={{secure_asset("assetsFront/js/appear.js")}}></script>
-    <script src={{secure_asset("assetsFront/js/bootstrap.bundle.min.js")}}></script>
-    <script src={{secure_asset("assetsFront/js/bootstrap-select.min.js")}}></script>
-    <script src={{secure_asset("assetsFront/js/isotope.js")}}></script>
-    <script src={{secure_asset("assetsFront/js/jquery.bxslider.min.js")}}></script>
-    <script src={{secure_asset("assetsFront/js/jquery.countdown.min.js")}}></script>
-    <script src={{secure_asset("assetsFront/js/jquery.countTo.js")}}></script>
-    <script src={{secure_asset("assetsFront/js/jquery.easing.min.js")}}></script>
-    <script src={{secure_asset("assetsFront/js/jquery.enllax.min.js")}}></script>
-    <script src={{secure_asset("assetsFront/js/jquery.fancybox.js")}}></script>
-    <script src={{secure_asset("assetsFront/js/jquery.magnific-popup.min.js")}}></script>
-    <script src={{secure_asset("assetsFront/js/jquery.paroller.min.js")}}></script>
-    <script src={{secure_asset("assetsFront/js/jquery.polyglot.language.switcher.js")}}></script>
-    <script src={{secure_asset("assetsFront/js/jQuery.style.switcher.min.js")}}></script>
-    <script src={{secure_asset("assetsFront/js/jquery-ui.js")}}></script>
-    <script src={{secure_asset("assetsFront/js/knob.js")}}></script>
-    <script src={{secure_asset("assetsFront/js/map-script.js")}}></script>
-    <script src={{secure_asset("assetsFront/js/owl.js")}}></script>
-    <script src={{secure_asset("assetsFront/js/pagenav.js")}}></script>
-    <script src={{secure_asset("assetsFront/js/parallax.min.js")}}></script>
-    <script src={{secure_asset("assetsFront/js/scrollbar.js")}}></script>
-    <script src={{secure_asset("assetsFront/js/slick.js")}}></script>
-    <script src={{secure_asset("assetsFront/js/timePicker.js")}}></script>
-    <script src={{secure_asset("assetsFront/js/validation.js")}}></script>
-    <script src={{secure_asset("assetsFront/js/wow.js")}}></script>
-    <script src={{secure_asset("assetsFront/js/TweenMax.min.js")}}></script><!-- thm custom script -->
-    <script src={{secure_asset("assetsFront/js/custom.js")}}></script>
+    <script src={{asset("assetsFront/js/jquery.js")}}></script>
+    <script src={{asset("assetsFront/js/aos.js")}}></script>
+    <script src={{asset("assetsFront/js/appear.js")}}></script>
+    <script src={{asset("assetsFront/js/bootstrap.bundle.min.js")}}></script>
+    <script src={{asset("assetsFront/js/bootstrap-select.min.js")}}></script>
+    <script src={{asset("assetsFront/js/isotope.js")}}></script>
+    <script src={{asset("assetsFront/js/jquery.bxslider.min.js")}}></script>
+    <script src={{asset("assetsFront/js/jquery.countdown.min.js")}}></script>
+    <script src={{asset("assetsFront/js/jquery.countTo.js")}}></script>
+    <script src={{asset("assetsFront/js/jquery.easing.min.js")}}></script>
+    <script src={{asset("assetsFront/js/jquery.enllax.min.js")}}></script>
+    <script src={{asset("assetsFront/js/jquery.fancybox.js")}}></script>
+    <script src={{asset("assetsFront/js/jquery.magnific-popup.min.js")}}></script>
+    <script src={{asset("assetsFront/js/jquery.paroller.min.js")}}></script>
+    <script src={{asset("assetsFront/js/jquery.polyglot.language.switcher.js")}}></script>
+    <script src={{asset("assetsFront/js/jQuery.style.switcher.min.js")}}></script>
+    <script src={{asset("assetsFront/js/jquery-ui.js")}}></script>
+    <script src={{asset("assetsFront/js/knob.js")}}></script>
+    <script src={{asset("assetsFront/js/map-script.js")}}></script>
+    <script src={{asset("assetsFront/js/owl.js")}}></script>
+    <script src={{asset("assetsFront/js/pagenav.js")}}></script>
+    <script src={{asset("assetsFront/js/parallax.min.js")}}></script>
+    <script src={{asset("assetsFront/js/scrollbar.js")}}></script>
+    <script src={{asset("assetsFront/js/slick.js")}}></script>
+    <script src={{asset("assetsFront/js/timePicker.js")}}></script>
+    <script src={{asset("assetsFront/js/validation.js")}}></script>
+    <script src={{asset("assetsFront/js/wow.js")}}></script>
+    <script src={{asset("assetsFront/js/TweenMax.min.js")}}></script><!-- thm custom script -->
+    <script src={{asset("assetsFront/js/custom.js")}}></script>
 </body>
 <!-- Mirrored from v.bootstrapmb.com/2021/4/ty75l10013/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 23 Oct 2021 19:21:45 GMT -->
 

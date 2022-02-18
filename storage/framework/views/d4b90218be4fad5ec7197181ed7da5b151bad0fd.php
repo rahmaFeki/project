@@ -1,6 +1,6 @@
-@extends('layouts.app')
 
-@section('content')
+
+<?php $__env->startSection('content'); ?>
 <!-- Page Loader -->
 
 
@@ -32,8 +32,8 @@
                               
                        
                           </div>
-                         <form id="logout-form" action="{{ route('signout') }}" method="POST" style="display: none;">
-                                      @csrf
+                         <form id="logout-form" action="<?php echo e(route('signout')); ?>" method="POST" style="display: none;">
+                                      <?php echo csrf_field(); ?>
                                   </form></a>
                       </div>
                         
@@ -48,11 +48,11 @@
     <!-- Start Quick menu with more functio -->
 
     <!-- Start Main leftbar navigation -->
-    @include('layouts.leftside' )
+    <?php echo $__env->make('layouts.leftside' , \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
     <!-- Start project content area -->
     <div class="page">
         <!-- Start Page header -->
-        @include('layouts.header' )
+        <?php echo $__env->make('layouts.header' , \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
         <!-- Start Page title and tab -->
         <div class="section-body">
             <div class="container-fluid">
@@ -73,7 +73,7 @@
 
 
                     <div class="tab-pane active" id="Staff-add">
-                        @csrf
+                        <?php echo csrf_field(); ?>
                         <div class="card">
 
                             <div class="card-header">
@@ -126,23 +126,23 @@
                                             </tr>
                                         </thead>
                                         <tbody id="res">
-                                            @foreach ($choix as $u)
+                                            <?php $__currentLoopData = $choix; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $u): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
 
-                                            <tr id="{!! $u->id!!}">
+                                            <tr id="<?php echo $u->id; ?>">
                                                 <td><img src="<?php echo asset('storage/'.$u->image) ?>" width="200px"
                                                         height="200px" /></td>
-                                                <td>{!! $u->lib!!}</td>
+                                                <td><?php echo $u->lib; ?></td>
 
 
                                                 <td>
                                                     <button type="button" class="btn btn-icon btn-sm js-sweetalert"
                                                         title="Delete" data-type="confirm"
-                                                        onClick="supp({!! $u->id!!})"><i
+                                                        onClick="supp(<?php echo $u->id; ?>)"><i
                                                             class="fa fa-trash-o text-danger"></i></button>
                                                 </td>
                                             </tr>
 
-                                            @endforeach
+                                            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
 
 
                                         </tbody>
@@ -252,7 +252,7 @@ $('#upload-image-form').submit(function(e) {
     let formData = new FormData(this);
     console.log(formData);
     $.ajax({
-        url: "{{ route('ajouter.mission') }}",
+        url: "<?php echo e(route('ajouter.mission')); ?>",
         headers: {
             'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
         },
@@ -341,7 +341,7 @@ function supp(index) {
     }).then((result) => {
         if (result.isConfirmed) {
             $.ajax({
-                url: "{{ route('delete.mission') }}",
+                url: "<?php echo e(route('delete.mission')); ?>",
                 headers: {
                     'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
                 },
@@ -372,4 +372,5 @@ function supp(index) {
 }
 </script>
 
-@endsection
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('layouts.app', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH C:\xampp1\htdocs\msm\resources\views/mission.blade.php ENDPATH**/ ?>

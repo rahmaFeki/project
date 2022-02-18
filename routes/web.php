@@ -13,9 +13,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
 Route::post('/entreprise/edit', 'App\Http\Controllers\EntrepriseController@update')->name('update.entrep');
 Route::post('/mission/edit', 'App\Http\Controllers\MissionController@update')->name('update.mission');
 Route::get('/entreprise', 'App\Http\Controllers\EntrepriseController@index')->name('entreprise.edit');

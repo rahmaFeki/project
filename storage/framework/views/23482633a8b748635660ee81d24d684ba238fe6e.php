@@ -19,7 +19,7 @@
     <link rel="stylesheet" href=<?php echo e(asset("assetsFront/css/hiddenbar.css")); ?>>
     <link rel="stylesheet" href=<?php echo e(asset("assetsFront/css/icomoon.css")); ?>>
     <link rel="stylesheet" href=<?php echo e(asset("assetsFront/css/color.css")); ?>>
-    <link href=<?php echo e(asset("assetsFront/css/color/theme-color.css")); ?> id="jssDefault" rel="stylesheet">
+    <link href=<?php echo e(secure_asset("assetsFront/css/color/theme-color.css")); ?> id="jssDefault" rel="stylesheet">
     <link rel="stylesheet" href=<?php echo e(asset("assetsFront/css/rtl.css")); ?>>
     <link rel="stylesheet" href=<?php echo e(asset("assetsFront/css/style.css")); ?>>
     <link rel="stylesheet" href=<?php echo e(asset("assetsFront/css/responsive.css")); ?>><!-- Favicon -->
@@ -138,14 +138,7 @@
                                             <li><a href="#service"><?php echo e($sections[3]); ?></a>
 
                                             </li>
-                                            <li class="dropdown"><a href="#"><?php echo e($sections[4]); ?></a>
-                                                <ul>
-                                                    <li><a href="team.html">Our Team</a></li>
-                                                    <li><a href="testimonials.html">Testimonials</a></li>
-                                                    <li><a href="faq.html">Faq</a></li>
-                                                    <li><a href="error.html">404 Error page</a></li>
-                                                </ul>
-                                            </li>
+                                          
                                             <li><a href="#choisir"><?php echo e($sections[5]); ?></a>
 
                                             </li>

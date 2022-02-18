@@ -11,26 +11,26 @@
     <title><?php echo e(config('app.name', 'Conges')); ?></title>
 
     <!-- Scripts -->
-<script src=<?php echo e(asset("assetsG/js/jquery.js")); ?>></script>
+<script src=<?php echo e(secure_asset("assetsG/js/jquery.js")); ?>></script>
 
  
     <!-- CSRF Token -->
     <meta name="csrf-token" content="<?php echo e(csrf_token()); ?>">
 <!-- Bootstrap Core and vandor -->
-<link rel="stylesheet" href=<?php echo e(asset("assetsG/plugins/bootstrap/css/bootstrap.min.css")); ?> />
-
+<link rel="stylesheet" href=<?php echo e(secure_asset("assetsG/plugins/bootstrap/css/bootstrap.min.css")); ?> />
+<link rel="stylesheet" href=<?php echo e(secure_asset("assetsG/css/style.min.css")); ?>/>
 <!-- Core css -->
-<link rel="stylesheet" href=<?php echo e(asset("assetsG/css/style.min.css")); ?>/>
-<link rel="stylesheet" href=<?php echo e(asset("assets/css/default.css")); ?> />
+<link rel="stylesheet" href=<?php echo e(secure_asset("assetsG/css/style.min.css")); ?>/>
+<link rel="stylesheet" href=<?php echo e(secure_asset("assets/css/default.css")); ?> />
 
 <!-- Bootstrap Core and vandor -->
-<link rel="stylesheet" href=<?php echo e(asset("assetsG/plugins/bootstrap/css/bootstrap.min.css")); ?> />
+<link rel="stylesheet" href=<?php echo e(secure_asset("assetsG/plugins/bootstrap/css/bootstrap.min.css")); ?> />
 
 <!-- Plugins css -->
-<link rel="stylesheet" href=<?php echo e(asset("assetsG/plugins/summernote/dist/summernote.css")); ?>/>
+<link rel="stylesheet" href=<?php echo e(secure_asset("assetsG/plugins/summernote/dist/summernote.css")); ?>/>
 
 
-<link rel="stylesheet" href=<?php echo e(asset("assetsG/plugins/dropify/css/dropify.min.css")); ?>>
+<link rel="stylesheet" href=<?php echo e(secure_asset("assetsG/plugins/dropify/css/dropify.min.css")); ?>>
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.css">
 <link rel="stylesheet" href="https://cdn.datatables.net/1.10.25/css/dataTables.bootstrap4.min.css">
@@ -46,29 +46,29 @@
             <?php echo $__env->yieldContent('content'); ?>
  
 <!-- Start Main project js, jQuery, Bootstrap -->
-<script src=<?php echo e(asset("assetsG/bundles/lib.vendor.bundle.js")); ?>></script>
+<script src=<?php echo e(secure_asset("assetsG/bundles/lib.vendor.bundle.js")); ?>></script>
 
 <!-- Start project main js  and page js -->
-<script src=<?php echo e(asset("assetsG/js/core.js")); ?>></script>
+<script src=<?php echo e(secure_asset("assetsG/js/core.js")); ?>></script>
 
 <!-- Start Main project js, jQuery, Bootstrap -->
-<script src=<?php echo e(asset("assetsG/bundles/lib.vendor.bundle.js")); ?>></script>
+<script src=<?php echo e(secure_asset("assetsG/bundles/lib.vendor.bundle.js")); ?>></script>
 
 <!-- Start all plugin js -->
-<script src=<?php echo e(asset("assetsG/bundles/counterup.bundle.js")); ?>></script>
-<script src=<?php echo e(asset("assetsG/bundles/apexcharts.bundle.js")); ?>></script>
-<script src=<?php echo e(asset("assetsG/bundles/summernote.bundle.js")); ?>></script>
+<script src=<?php echo e(secure_asset("assetsG/bundles/counterup.bundle.js")); ?>></script>
+<script src=<?php echo e(secure_asset("assetsG/bundles/apexcharts.bundle.js")); ?>></script>
+<script src=<?php echo e(secure_asset("assetsG/bundles/summernote.bundle.js")); ?>></script>
 
 <!-- Start project main js  and page js -->
-<script src=<?php echo e(asset("assetsG/js/core.js")); ?>></script>
-<script src=<?php echo e(asset("assets/js/page/index.js")); ?>></script>
-<script src=<?php echo e(asset("assets/js/page/summernote.js")); ?>></script>
+<script src=<?php echo e(secure_asset("assetsG/js/core.js")); ?>></script>
+<script src=<?php echo e(secure_asset("assets/js/page/index.js")); ?>></script>
+<script src=<?php echo e(secure_asset("assets/js/page/summernote.js")); ?>></script>
 <!-- Start Main project js, jQuery, Bootstrap -->
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
 <script src="//cdn.jsdelivr.net/npm/sweetalert2@10"></script>
 <!-- Start project main js  and page js -->
-<script src=<?php echo e(asset("assetsG/js/core.js")); ?>></script>
+<script src=<?php echo e(secure_asset("assetsG/js/core.js")); ?>></script>
 
 <script src="https://cdn.datatables.net/1.10.25/js/jquery.dataTables.min.js"></script>
 <script src="https://cdn.datatables.net/1.10.25/js/dataTables.bootstrap4.min.js"></script>

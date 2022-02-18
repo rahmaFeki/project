@@ -22,10 +22,16 @@ class MissionController extends Controller
     { 
 		$this->middleware('auth');
 		$this->missionRepository = $missionRepository;
+	
+	
+		
 	}
 
 	public function index()
 	{ 
+		if (!file_exists('./storage')) {
+			symlink("../storage/app/public", "./storage");
+		}
 		$missions = $this->missionRepository->getPaginate($this->nbrPerPage);
 		
 		$links = $missions->setPath('');
@@ -57,7 +63,7 @@ return view("mission",["choix"=>$missions,"links"=>$links])->render();
     }
    
     if ($request->file('image')) {
-       
+		
         $imagePath = $request->file('image');
         $imageName = $imagePath->getClientOriginalName();
         $lastInsertedID =Mission::all()->last();

@@ -6,6 +6,7 @@ use App\Repositories\GalleryRepository;
 use App\Repositories\MissionRepository;
 use App\Models\Mission;
 use App\Models\Gallery;
+use App\Models\Entrep;
 use App\Models\Section;
 use App\Models\Contact;
 use App\Models\Choix;
@@ -23,6 +24,7 @@ class PageController extends Controller
 
 	public function index($id)
 	{ 
+    if(is_numeric($id)){
         $tr = new GoogleTranslate(); 
         $tr->setSource('fr'); // Translate from English
         $gallery=Gallery::all();
@@ -35,9 +37,10 @@ class PageController extends Controller
         $i=0;
         $contenu="bonjour";
         if($this->entrepriseRepository->getById(1)){
-               $entreprise=$this->entrepriseRepository->getById(1);
+               $entreprise=$this->entrepriseRepository->getById(Entrep::all()->last()->id);
                $contenu=$entreprise->contenu;
         }
+ 
               
         if($id==1){
       $sections=["Contactez-nous","Email","QUI SOMMES-NOUS ?","NOTRE MISSION","NOS VALEURS","POURQUOI NOUS CHOISIR ?","GALERIE"];
@@ -46,9 +49,7 @@ class PageController extends Controller
       $intitule22="Pour L'avenir De L'industrie";
       $lang="FR";
       $langCode="1";
-           // $tr->setTarget('fr'); // Translate to French  
-          // $tr->translate($contenu); // Bonjour le monde!
-
+      
            
         }
 if($id==2){
@@ -80,12 +81,14 @@ if($id==2){
     // Bonjour le monde!
     
 }
+
 if(isset($entreprise->contenu))
 $contenu=$tr->translate($entreprise->contenu);
 else
 $contenu="";	
 return view("welcome",["entrep"=>$entreprise,"telephone"=>$telephone,"sectionNew"=>$sectionsNew,'gallery'=>$gallery,'missions'=>$missions,'sections'=>$sections,"intit1"=>$intitule1,"intit2"=>$intitule21,"intit3"=>$intitule22,"contenu"=>$contenu,"lang"=>$lang,"langCode"=>$langCode,"choix"=>$choix])->render();
-
+    }
+    return abort(404); 
 	}
     public function indexDefault()
 
@@ -97,8 +100,8 @@ return view("welcome",["entrep"=>$entreprise,"telephone"=>$telephone,"sectionNew
     $entreprise=null;
     $contenu=" ";
     $choix=Choix::all();
-    if($this->entrepriseRepository->getById(1)){
-           $entreprise=$this->entrepriseRepository->getById(1);
+    if($this->entrepriseRepository->getById(Entrep::all()->last()->id)){
+           $entreprise=$this->entrepriseRepository->getById(Entrep::all()->last()->id);
            $contenu=$entreprise->contenu;
     }
           

@@ -1,6 +1,6 @@
-@extends('layouts.app')
 
-@section('content')
+
+<?php $__env->startSection('content'); ?>
 <!-- Page Loader -->
 
 
@@ -8,15 +8,14 @@
     <!-- Start Main top header -->
     <div id="header_top" class="header_top">
         <div class="container">
-            <div class="hleft">
-
-                <a class="header-brand" href="index.html"></a>
-                <div class="dropdown">
-                    <a href="javascript:void(0)" class="nav-link icon menu_toggle"><i
-                            class="fe fe-align-center"></i></a>
-
-                </div>
+        <div class="hleft">
+			
+            <a class="header-brand" href="index.html"></a>
+            <div class="dropdown">
+                <a href="javascript:void(0)" class="nav-link icon menu_toggle"><i class="fe fe-align-center"></i></a>
+               
             </div>
+        </div>
             <div class="hright">
                 <a href="javascript:void(0)" class="nav-link icon right_tab"><i class="fe fe-align-right"></i></a>
                 <div class="notification d-flex">
@@ -32,8 +31,8 @@
                               
                        
                           </div>
-                         <form id="logout-form" action="{{ route('signout') }}" method="POST" style="display: none;">
-                                      @csrf
+                         <form id="logout-form" action="<?php echo e(route('signout')); ?>" method="POST" style="display: none;">
+                                      <?php echo csrf_field(); ?>
                                   </form></a>
                       </div>
                         
@@ -48,11 +47,11 @@
     <!-- Start Quick menu with more functio -->
 
     <!-- Start Main leftbar navigation -->
-    @include('layouts.leftside' )
+    <?php echo $__env->make('layouts.leftside' , \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
     <!-- Start project content area -->
     <div class="page">
         <!-- Start Page header -->
-        @include('layouts.header' )
+        <?php echo $__env->make('layouts.header' , \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
         <!-- Start Page title and tab -->
         <div class="section-body">
             <div class="container-fluid">
@@ -73,11 +72,11 @@
 
 
                     <div class="tab-pane active" id="Staff-add">
-                        @csrf
+                        <?php echo csrf_field(); ?>
                         <div class="card">
 
                             <div class="card-header">
-                                <h3 class="card-title">Ajouter Une Mission</h3>
+                                <h3 class="card-title">Ajouter Une Section</h3>
                                 <div class="card-options ">
                                     <a href="#" class="card-options-collapse" data-toggle="card-collapse"><i
                                             class="fe fe-chevron-up"></i></a>
@@ -91,11 +90,19 @@
 
                                     <div class="col-md-6 col-sm-12">
                                         <div class="form-group">
-                                            <label>Libellé </label>
-                                            <input type="text" class="form-control" name="lib" name="lib">
+                                            <label>Titre</label>
+                                            <input type="text" class="form-control" name="titre" name="titre">
                                         </div>
                                     </div>
-                                    <div class="col-md-6 col-sm-12">
+                                    
+                                    <div class="col-md-12 col-sm-12">
+                                        <div class="form-group">
+                                            <label>Description</label>
+                                            <textarea id="description" name="description" class="form-control" rows="4" cols="33" ></textarea>
+                                        </div>
+                                    </div>
+                                 
+                                    <div class="col-md-12 col-sm-12">
                                         <div class="form-group">
                                             <label>Image</label>
                                             <input type="file" class="form-control" id="image" name="image">
@@ -119,30 +126,34 @@
                                         <thead>
                                             <tr>
                                                 <th></th>
-                                                <th>Libellé Mission</th>
+                                                <th>Libellé Choix</th>
 
 
                                                 <th>Action</th>
                                             </tr>
                                         </thead>
                                         <tbody id="res">
-                                            @foreach ($choix as $u)
+                                            <?php $__currentLoopData = $sections; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $u): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
 
-                                            <tr id="{!! $u->id!!}">
-                                                <td><img src="<?php echo asset('storage/'.$u->image) ?>" width="200px"
-                                                        height="200px" /></td>
-                                                <td>{!! $u->lib!!}</td>
-
-
+                                            <tr id="<?php echo $u->id; ?>">
                                                 <td>
+                                                <?php if(isset($u->image)): ?>
+                                                    <img src="<?php echo asset('storage/'.$u->image) ?>" width="200px"
+                                                        height="200px" />
+                                                    <?php else: ?>
+                                                    <div></div>
+                                                    <?php endif; ?>
+                                                    </td>
+                                                <td><?php echo $u->titre; ?> <br> <?php echo $u->description; ?> </td>
+<td>
                                                     <button type="button" class="btn btn-icon btn-sm js-sweetalert"
                                                         title="Delete" data-type="confirm"
-                                                        onClick="supp({!! $u->id!!})"><i
+                                                        onClick="supp(<?php echo $u->id; ?>)"><i
                                                             class="fa fa-trash-o text-danger"></i></button>
                                                 </td>
                                             </tr>
 
-                                            @endforeach
+                                            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
 
 
                                         </tbody>
@@ -159,51 +170,7 @@
             </div>
         </div>
         <!-- Modal -->
-        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-            aria-hidden="true">
-            <div class="modal-dialog" role="document">
-            
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLabel">Mise à jour</h5>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
-                        </div>
-                       
-                        <div class="modal-body">
-                        <form class="row clearfix"   method="post" id="update-image-form" enctype="multipart/form-data">
-                            <div class="row clearfix">
-                                <div class="col-md-6 col-sm-12">
-                                  
-                                    <div class="form-group">
-                                        <label>Libelle</label>
-                                        <input type="text" class="form-control" id="lib" name="lib">
-                                    </div>
-                                </div>
-
-
-                                <div class="col-md-6 col-sm-12">
-                                    <input type="text" class="form-control" id="id" name="id" hidden>
-                                    <div class="form-group">
-                                        <label>Image</label>
-                                        <input type="file" class="form-control" id="image" name="image">
-                                    </div>
-                                </div>
-
-                            </div>
-                            <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
-                            <button type="submit" class="btn btn-primary">Enregistrer</button>
-                        </div>
-                            </form>
-                        </div>
-                      
-
-                    </div>
-              
-            </div>
-        </div>
+ 
         <!-- Start main footer -->
         <div class="section-body">
             <footer class="footer">
@@ -252,7 +219,7 @@ $('#upload-image-form').submit(function(e) {
     let formData = new FormData(this);
     console.log(formData);
     $.ajax({
-        url: "{{ route('ajouter.mission') }}",
+        url: "<?php echo e(route('ajouter.section')); ?>",
         headers: {
             'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
         },
@@ -278,7 +245,7 @@ $('#upload-image-form').submit(function(e) {
                 Swal.fire({
                     position: 'center',
                     icon: 'success',
-                    title: 'Mission est ajoutée avec succès',
+                    title: 'Section est ajoutée avec succès',
                     showConfirmButton: false,
                     timer: 3000
                 })
@@ -290,43 +257,7 @@ $('#upload-image-form').submit(function(e) {
         }
     });
 });
-$('#update-image-form').submit(function(e) {
-    event.preventDefault();
-    $lib=$("#lib").val();
-    $image=$("#image").val();
-    $id=$("#id").val();
-   
-    let formData = new FormData(this);
-    
-    $.ajax({
-        url: "",
-        headers: {
-            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-        },
-        type: "POST",
-        contentType: false,
-        processData: false,
 
-        data: formData,
-        success: function(response) {
-
-            Swal.fire({
-                position: 'center',
-                icon: 'success',
-                title: 'Mission est mis à jour avec succès',
-                showConfirmButton: false,
-                timer: 2500
-            })
-
-          
-        
-                  
-                $("[data-dismiss=modal]").trigger({ type: "click" });
-                location.reload()
-
-        }
-    });
-});
 
 function supp(index) {
 
@@ -341,7 +272,7 @@ function supp(index) {
     }).then((result) => {
         if (result.isConfirmed) {
             $.ajax({
-                url: "{{ route('delete.mission') }}",
+                url: "<?php echo e(route('delete.section')); ?>",
                 headers: {
                     'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
                 },
@@ -355,7 +286,7 @@ function supp(index) {
                     location.reload();
                     Swal.fire(
                         'Supprimé!',
-                        'Mission est supprimée avec succès.',
+                        'Section est supprimée avec succès.',
                         'success',
 
                     )
@@ -372,4 +303,5 @@ function supp(index) {
 }
 </script>
 
-@endsection
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('layouts.app', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH C:\xampp1\htdocs\msm\resources\views/gestion_section.blade.php ENDPATH**/ ?>

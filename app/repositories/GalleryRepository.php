@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Repositories;
-
+use File;
 use App\Models\Gallery;
 use App\Models\Entrep;
 use Illuminate\Support\Facades\Hash;
@@ -64,8 +64,10 @@ class GalleryRepository
 
 	public function destroy($id)
 	{
-	
+		
 		$this->getById($id)->delete();
+	//	$file=public_path().'/storage/app/0_tr.jpg';
+		Storage::delete('0_13.jpg');
 
 }
 		

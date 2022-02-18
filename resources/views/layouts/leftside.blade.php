@@ -12,7 +12,7 @@
 </div>
     <div id="left-sidebar" class="sidebar">
     <img src="{{asset("assetsG/images/logoMSM.png")}}" width="450px"
-                                                        height="200px" />
+                                                        height="100px" />
         <h5 class="brand-name"><a href="javascript:void(0)" class="menu_option float-right"><i class="icon-grid font-16" data-toggle="tooltip" data-placement="left" title="Grid & List Toggle"></i></a></h5>
         <ul class="nav nav-tabs">
    

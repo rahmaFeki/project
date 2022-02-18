@@ -18,7 +18,7 @@ class ChoixController extends Controller
 
     public function __construct(ChoixRepository $choixRepository)
     { 
-	
+		$this->middleware('auth');
 		$this->choixRepository = $choixRepository;
 	}
 
